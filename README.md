@@ -42,12 +42,13 @@ Deux façons d'utiliser l'app :
 3. Menu du navigateur → **Ajouter à l'écran d'accueil**
 
 **Vrai fichier .apk** (pour l'installer comme une app à part entière)
-1. Active GitHub Pages sur ce dépôt (Settings → Pages)
-2. Va sur [pwabuilder.com](https://www.pwabuilder.com), colle l'URL de la Page générée
-3. Génère le package Android, télécharge le `.apk`
-4. Transfère-le sur ton téléphone et installe-le (autorisation "sources inconnues" nécessaire)
+1. Va dans la section **Releases** du dépôt GitHub
+2. Télécharge le fichier `.apk` de la version souhaitée
+3. Transfère-le sur ton téléphone Android si nécessaire
+4. Ouvre le fichier `.apk` et suis les instructions d'installation
+5. Android peut demander l'autorisation d'installer des applications provenant de cette source
 
-L'app inclut un `manifest.json` et un `sw.js` (service worker) qui la rendent installable et utilisable **hors-ligne** une fois le premier chargement effectué. Aucune connexion requise ensuite, y compris pour la version `.apk`.
+L'APK est généré directement à partir du projet Android de DiGest et embarque les fichiers de l'application. L'application peut être utilisée hors-ligne pour ses fonctionnalités locales.
 
 ## Mise à jour
 
