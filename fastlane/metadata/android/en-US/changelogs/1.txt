@@ -1,0 +1,1 @@
+First release: food/recipe tracking with colour-coded symptoms, Recipe Book, symptom ranking, Agenda with appointments, doctor export, password protection, dark mode. 100% local, no account or server.

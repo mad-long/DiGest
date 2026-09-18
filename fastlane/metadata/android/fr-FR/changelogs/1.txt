@@ -1,0 +1,1 @@
+Première version : suivi des aliments/recettes avec symptômes colorés, Carnet de Recettes, Suivi par symptôme, Agenda avec rendez-vous, Export Médecin, protection par mot de passe, mode sombre. 100 % local, sans compte ni serveur.

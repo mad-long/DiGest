@@ -1,0 +1,9 @@
+Digest permet de noter les aliments et recettes consommés, d'y associer des symptômes personnalisables par couleur, et de suivre les réactions au fil du temps. Un agenda mensuel permet d'enregistrer des notes libres, des rendez-vous médicaux et des jauges de suivi (0 à 10). Un classement regroupe automatiquement les aliments par symptôme associé, du plus fréquent au moins fréquent.
+
+Un export dédié prépare un résumé visuel simple à présenter à un professionnel de santé, incluant les aliments les plus signalés et les symptômes du mois en cours.
+
+Toutes les données restent stockées localement sur l'appareil, sans compte utilisateur ni connexion réseau après le premier chargement. Une protection par mot de passe optionnelle chiffre les données stockées (AES-GCM). Export et import de sauvegardes disponibles à tout moment, avec une variante chiffrée.
+
+L'app ne demande aucune permission particulière, ne nécessite pas d'accès root, et n'interagit avec aucune autre application installée sur l'appareil. La saisie se fait par compteurs et sélections rapides, sans champ à remplir en texte libre sauf si souhaité.
+
+Digest n'est pas un dispositif médical : elle ne diagnostique rien et ne formule aucune recommandation médicale, alimentaire ou thérapeutique.

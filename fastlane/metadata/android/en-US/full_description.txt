@@ -1,0 +1,9 @@
+Digest lets you log foods and recipes, associate them with colour-coded, customisable symptoms, and track reactions over time. A monthly calendar allows free-text notes, medical appointments, and custom tracking gauges (0 to 10). A ranking view automatically groups foods by associated symptom, from most to least frequent.
+
+A dedicated export prepares a simple visual summary to bring to a healthcare professional, including the most frequently flagged foods and the current month's symptoms.
+
+All data stays stored locally on the device, with no user account and no network connection after the first load. Optional password protection encrypts stored data (AES-GCM). Backup export and import are available at any time, including an encrypted variant.
+
+The app requests no special permissions, does not require root access, and does not interact with any other app installed on the device. Data entry relies on counters and quick selections, with free-text fields only where explicitly wanted.
+
+Digest is not a medical device: it does not diagnose anything and makes no medical, dietary, or therapeutic recommendation.
