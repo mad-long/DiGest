@@ -2145,6 +2145,9 @@ function generateDoctorExport(){
   }
 }
 window.addEventListener('afterprint', () => document.body.classList.remove('printing-doctor-export'));
+function closeDoctorExportPrintView(){
+  document.body.classList.remove('printing-doctor-export');
+}
 
 
 function escapeHtml(str){
@@ -2567,6 +2570,7 @@ const clickActions = {
   toggleQuickSymptom: (a) => toggleQuickSymptom(a),
   closeBilan: () => closeBilan(),
   generateDoctorExport: () => generateDoctorExport(),
+  closeDoctorExportPrintView: () => closeDoctorExportPrintView(),
   toggleExtraGauges: () => toggleExtraGauges(),
   deleteMedication: (a) => deleteMedication(a),
   addPathology: () => addPathology(),
