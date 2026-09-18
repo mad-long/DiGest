@@ -14,3 +14,9 @@ npm-debug.log
 # Fichiers de build locaux éventuels
 *.apk
 *.aab
+
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/capacitor-cordova-android-plugins/
