@@ -1,0 +1,8 @@
+{
+  "appId": "fr.digest.app",
+  "appName": "Digest",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https"
+  }
+}
