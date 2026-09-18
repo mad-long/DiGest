@@ -647,7 +647,7 @@
   #doctorExportPrintView .de-app{ font-size:0.72rem; opacity:0.85; letter-spacing:0.04em; }
   #doctorExportPrintView .de-date-pill{ font-size:0.72rem; background:rgba(255,255,255,0.18); padding:4px 10px; border-radius:20px; }
   #doctorExportPrintView h1{ font-size:1.4rem; margin:14px 0 2px; font-weight:800; }
-  #doctorExportPrintView .de-sub{ margin:0; font-size:0.8rem; opacity:0.85; }
+  #doctorExportPrintView .de-sub{ margin:0; font-size:0.8rem; }
   #doctorExportPrintView section{ padding:18px 20px 4px; }
   #doctorExportPrintView .de-section-title{
     display:flex; align-items:center; gap:8px; font-size:0.95rem; font-weight:800; color:#2C4A6E;
