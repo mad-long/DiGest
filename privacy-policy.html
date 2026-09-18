@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Digest</title>
+<style>
+  body{ font-family:-apple-system,Roboto,Segoe UI,Noto Sans,sans-serif; max-width:720px; margin:0 auto; padding:32px 20px 60px; line-height:1.6; color:#1E3524; background:#E4F0E0; }
+  h1{ font-family:Georgia,serif; font-size:1.6rem; margin-bottom:4px; }
+  .updated{ color:#55705F; font-size:0.85rem; margin-bottom:28px; }
+  h2{ font-family:Georgia,serif; font-size:1.15rem; margin-top:32px; border-bottom:1px solid #C8D8C4; padding-bottom:6px; }
+  p, li{ font-size:0.95rem; }
+  ul{ padding-left:22px; }
+  .card{ background:rgba(255,255,255,0.55); border:1px solid #C8D8C4; border-radius:10px; padding:16px 20px; margin-top:28px; }
+  a{ color:#4C7A52; }
+  footer{ margin-top:40px; font-size:0.82rem; color:#55705F; }
+</style>
+</head>
+<body>
+
+<h1>Politique de confidentialité — Digest</h1>
+<p class="updated">Dernière mise à jour : 12 août 2026, 10h25 UTC</p>
+
+<div class="card">
+  <p><strong>En une phrase :</strong> Digest ne collecte, n'envoie et ne partage aucune donnée. Tout ce que tu notes reste sur ton appareil, dans ton navigateur.</p>
+</div>
+
+<h2>Qui édite cette app</h2>
+<p>Digest est une app personnelle développée et publiée par lóng (techcollab@protonmail.com), à titre non commercial, sous licence libre (MIT). Le code source complet est public et consultable sur le dépôt du projet.</p>
+
+<h2>Aucune collecte de données</h2>
+<p>Digest fonctionne entièrement hors-ligne, sans compte, sans serveur, sans connexion réseau après le premier chargement. Concrètement :</p>
+<ul>
+  <li>Aucune donnée n'est envoyée à qui que ce soit, y compris à l'éditeur de l'app</li>
+  <li>Aucun outil d'analyse d'audience, aucun tracker, aucun pixel publicitaire</li>
+  <li>Aucune ressource (police, script, image) chargée depuis un service externe</li>
+  <li>La politique de sécurité du contenu (CSP) de l'app interdit techniquement toute requête vers un domaine autre qu'elle-même</li>
+</ul>
+
+<h2>Données stockées, et où</h2>
+<p>Tout ce que tu saisis (aliments, symptômes, agenda, notes, pathologies, traitements…) est stocké uniquement dans le stockage local (<code>localStorage</code>) de ton navigateur, sur ton appareil. L'éditeur de l'app n'y a jamais accès — il n'existe techniquement aucun moyen pour lui de consulter tes données.</p>
+<p>Un chiffrement optionnel (mot de passe personnel, AES-GCM) peut être activé pour protéger ces données localement. Le mot de passe n'est ni stocké ni transmis nulle part : lui aussi reste uniquement sur ton appareil, sous forme dérivée cryptographiquement (PBKDF2).</p>
+<p>Tu peux exporter tes données à tout moment (fichier <code>.json</code>, avec une variante chiffrée) et les supprimer intégralement en désinstallant l'app ou en vidant les données du navigateur pour ce site.</p>
+<p>L'export standard (non chiffré) retire automatiquement le nom, le lieu et les notes de tes rendez-vous médicaux — seuls la date, l'heure et le type de médecin y figurent, pour éviter qu'un détail identifiant ne sorte de l'appareil sans protection. L'export chiffré conserve l'intégralité de ces informations.</p>
+<p><strong>Sur le RGPD</strong> — le RGPD s'applique à un <em>responsable de traitement</em> qui collecte ou traite des données personnelles. Ici, l'éditeur ne collecte ni ne traite aucune donnée : tes informations restent sur ton appareil, sous ton seul contrôle, sans jamais transiter par un tiers. Les obligations classiques qui en découlent (désignation d'un DPO, registre des traitements, durées de conservation, droit de réclamation à la CNIL pour un traitement effectué par l'éditeur) n'ont donc pas d'objet dans ce cas précis, faute de traitement à encadrer.</p>
+
+<h2>Permissions</h2>
+<p>Digest ne demande aucune permission particulière : ni accès à la caméra, ni à la localisation, ni aux contacts, ni au stockage externe, ni à quoi que ce soit d'autre sur l'appareil.</p>
+
+<h2>Partage avec des tiers</h2>
+<p>Aucun. Il n'existe aucune donnée à partager, puisqu'aucune ne quitte jamais l'appareil.</p>
+
+<h2>Utilisation par des mineurs</h2>
+<p>Digest ne collecte aucune donnée, de personne, quel que soit l'âge. L'app n'est pas spécifiquement conçue pour les enfants, mais ne présente pas de risque de confidentialité lié à l'âge puisqu'aucune information n'est jamais transmise.</p>
+
+<h2>Avertissement santé</h2>
+<p>Digest est un outil de suivi personnel, pas un dispositif médical. Elle ne diagnostique rien, n'établit aucun lien de cause à effet certain, et ne recommande aucun traitement, régime ou conduite à tenir. En cas de doute sur une intolérance, une allergie ou tout autre souci de santé, consulte un professionnel de santé qualifié.</p>
+
+<h2>Mentions légales</h2>
+<p><strong>Éditeur</strong> — Digest est un projet personnel, non-commercial, publié sous le pseudonyme lóng (techcollab@protonmail.com). Conformément à la loi française pour la confiance dans l'économie numérique (LCEN, art. 6-III), un éditeur non professionnel publiant à titre personnel peut conserver son anonymat vis-à-vis du public ; son identité reste connue de l'hébergeur.</p>
+<p><strong>Directeur de la publication</strong> — lóng (techcollab@protonmail.com).</p>
+<p><strong>Hébergement</strong> — GitHub Pages, GitHub Inc. (États-Unis) — <a href="https://github.com">github.com</a>.</p>
+<p><strong>Conception et développement</strong> — Digest est conçue, développée et maintenue par la même personne que l'éditeur ci-dessus ; aucun prestataire tiers n'est impliqué.</p>
+<p><strong>Propriété intellectuelle</strong> — Le code source de Digest est publié sous licence MIT (voir le fichier <code>LICENSE</code> du dépôt) ; il peut être librement réutilisé dans les conditions de cette licence.</p>
+<p><strong>Cookies et traceurs</strong> — Aucun. Digest ne dépose ni cookie, ni traceur, ni SDK tiers d'aucune sorte.</p>
+<p><strong>Conditions d'utilisation</strong> — voir les <a href="cgu.html">Conditions générales d'utilisation</a>.</p>
+<p><strong>Droit applicable</strong> — Les présentes mentions sont soumises au droit français.</p>
+<p><strong>Contact</strong> — techcollab@protonmail.com.</p>
+
+<h2>Code source et vérifiabilité</h2>
+<p>Parce qu'aucune donnée ne transite par un serveur, cette politique n'est pas qu'une promesse : le code source complet de Digest est public, sous licence MIT, et peut être vérifié par n'importe qui.</p>
+
+<h2>Modifications de cette politique</h2>
+<p>Si cette politique venait à changer, la date de mise à jour en haut de cette page serait actualisée en conséquence.</p>
+
+<h2>Contact</h2>
+<p>Pour toute question, une issue peut être ouverte sur le dépôt du projet.</p>
+
+<footer>Digest — 100 % local, sans compte, sans serveur.</footer>
+
+</body>
+</html>

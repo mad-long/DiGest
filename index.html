@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digest</title>
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADS0lEQVR4nO3cMW4TQRiG4THiJrTchFShSZ1jBClFJK6ROg103ISWu1BsZKEkHxjvemb1z/OUURyvZt79x5YcH67urhu85d3oC2C/xEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjej76AZ0/3j6MvYV9uHm5HX0I7jP16a03808BKRh4ryjjFwFUaMzlkcYb+I2TA5FDGefqvW+84lLFG59XzVpaoaxzGxno917BfHMrYSreVdKwQiYOoUxzOlG31WU+Tg0gcROIgEgeROIjEQbSXT4IN9OX7t9bar58/Xvz8w8dPX68/j7iivZg3jqWJE39nzkpmjOOULN58yGyJzBXHGVm8fvg8iUz0gnRlGZv/nf2bJY5td3SSPqaI4xJ7OUMf9eO43C6W76N4HJfev9p9VI6jz84V7qNyHKxUNo6eN3TV4VE2DtarGUf/W7nk8KgZB5sQB1HBOEZN+HonS8E42Io4iMRBJA4icRCJg0gcROIgKhjHqE+H1/tUesE42Io4iGrG0X/C1ztTWtU42ETZOHreyiXHRiscB+tVjqPPDV11bLTacbTL71zhMlr5ONol9692GW2GONpldrF8GW2SONrWezlDGW2eONp2OzpJGW22r31a9vXsj4nPk8VirjgWZyQyWxaLGeNYHPf7L5XM2cTRvHEcLQXcvPqS2snLaFO9IOV/iYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYOoUxw3D7d9nmgSfdbT/8o+e7p/HH0Ju+NYIeoXh5NlK91Wsuvk0Md6PdfQsULUOw7DY43OqzdgcujjPP3X7XB1d935KY+8ezzRqNtp5GsOI+QUA1dp5OT4kynywh7unL3EwQ55K0skDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIh+A6itmACfWA+jAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAADS0lEQVR4nO3cMW4TQRiG4THiJrTchFShSZ1jBClFJK6ROg103ISWu1BsZKEkHxjvemb1z/OUURyvZt79x5YcH67urhu85d3oC2C/xEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjej76AZ0/3j6MvYV9uHm5HX0I7jP16a03808BKRh4ryjjFwFUaMzlkcYb+I2TA5FDGefqvW+84lLFG59XzVpaoaxzGxno917BfHMrYSreVdKwQiYOoUxzOlG31WU+Tg0gcROIgEgeROIjEQbSXT4IN9OX7t9bar58/Xvz8w8dPX68/j7iivZg3jqWJE39nzkpmjOOULN58yGyJzBXHGVm8fvg8iUz0gnRlGZv/nf2bJY5td3SSPqaI4xJ7OUMf9eO43C6W76N4HJfev9p9VI6jz84V7qNyHKxUNo6eN3TV4VE2DtarGUf/W7nk8KgZB5sQB1HBOEZN+HonS8E42Io4iMRBJA4icRCJg0gcROIgKhjHqE+H1/tUesE42Io4iGrG0X/C1ztTWtU42ETZOHreyiXHRiscB+tVjqPPDV11bLTacbTL71zhMlr5ONol9692GW2GONpldrF8GW2SONrWezlDGW2eONp2OzpJGW22r31a9vXsj4nPk8VirjgWZyQyWxaLGeNYHPf7L5XM2cTRvHEcLQXcvPqS2snLaFO9IOV/iYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYOoUxw3D7d9nmgSfdbT/8o+e7p/HH0Ju+NYIeoXh5NlK91Wsuvk0Md6PdfQsULUOw7DY43OqzdgcujjPP3X7XB1d935KY+8ezzRqNtp5GsOI+QUA1dp5OT4kynywh7unL3EwQ55K0skDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIjEQSQOInEQiYNIHETiIBIHkTiIxEEkDiJxEImDSBxE4iASB5E4iMRBJA4icRCJg0gcROIgEgeROIh+A6itmACfWA+jAAAAAElFTkSuQmCC">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Carnet">
+<meta name="theme-color" content="#4C7A52">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src data: 'self'; connect-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none';">
+<meta name="theme-color" content="#4C7A52">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-locked">
+
+<div id="lockScreen">
+  <div class="lock-card">
+    <h2>Carnet verrouillé</h2>
+    <p>Entre ton mot de passe pour déchiffrer et accéder à tes données.</p>
+    <input type="password" id="lockPassphrase" placeholder="Mot de passe" autocomplete="current-password" data-enter="attemptUnlock">
+    <button class="btn full u-mt10" data-act="attemptUnlock">Déverrouiller</button>
+    <div class="lock-error" id="lockError"></div>
+    <p class="u-mt18-76">Mot de passe oublié ? Il n'existe aucun moyen de récupérer tes données sans lui. <a class="u-danger" href="#" data-act="confirmResetProtection">Réinitialiser l'app (efface les données protégées)</a></p>
+  </div>
+</div>
+
+<header>
+  <div class="header-row">
+    <div>
+      <h1>Carnet d'intolérances</h1>
+      <p>Ta santé mérite sa vie privée.</p>
+    </div>
+    <button class="header-settings-btn no-print" id="mainTabParams" data-act="setMainTab" data-a="params" title="Paramètres">⚙</button>
+  </div>
+</header>
+
+<div class="tab-bar no-print">
+  <button class="btn tab-btn-aliments active-tab" id="mainTabAliments" data-act="setMainTab" data-a="aliments">Aliments</button>
+  <button class="btn tab-btn-recettes" id="mainTabRecipeBook" data-act="setMainTab" data-a="recipebook">Recettes</button>
+  <button class="btn tab-btn-aliments" id="mainTabRanking" data-act="setMainTab" data-a="ranking">Suivi</button>
+  <button class="btn tab-btn-aliments" id="mainTabAgenda" data-act="setMainTab" data-a="agenda">Agenda</button>
+  <button class="btn tab-btn-rdv" id="mainTabDoctorExport" data-act="setMainTab" data-a="doctor">🩺 Export Médecin</button>
+</div>
+
+<main>
+
+<section id="viewAliments">
+
+  <div class="card" id="welcomeBanner"></div>
+
+  <div class="card no-print" id="addCard">
+    <div class="add-buttons">
+      <button class="btn aliment-btn" id="tabFoodBtn" data-act="setAddMode" data-a="food">
+        <span class="tile-ico" aria-hidden="true">🥕</span>
+        <span class="tile-deco" aria-hidden="true">🌿</span>
+        <span class="tile-label">Ajouter<br>un aliment</span>
+      </button>
+      <button class="btn recette-btn" id="tabRecipeBtn" data-act="setAddMode" data-a="recipe">
+        <span class="tile-ico" aria-hidden="true">🍲</span>
+        <span class="tile-deco" aria-hidden="true">🍅</span>
+        <span class="tile-label">Ajouter<br>une recette</span>
+      </button>
+    </div>
+
+    <div class="u-hidden-mt16" id="addForm">
+      <div class="u-flex-sb-center">
+        <h2 class="u-m0" id="addFormTitle">Ajouter un aliment</h2>
+        <button class="icon-btn" title="Fermer" data-act="requestCloseAddForm">✕</button>
+      </div>
+
+      <div class="wizard-progress u-mt12"><div class="wizard-progress-fill" id="addFormProgressFill"></div></div>
+      <p class="wizard-step-label" id="addFormStepLabel">Étape 1 sur 4</p>
+
+      <!-- Étape 1 : nom (+ ingrédients si recette) -->
+      <div class="wizard-step" id="addStep1">
+        <label id="nameLabel" for="itemName">Nom de l'aliment</label>
+        <input type="text" id="itemName" placeholder="ex. lentilles corail">
+
+        <div class="u-hidden" id="ingredientsSection">
+          <label for="ingredientInput">Ingrédients</label>
+          <div class="tag-input-row">
+            <input type="text" id="ingredientInput" placeholder="ex. lentilles corail, lait de coco…" data-act="onIngredientSearch">
+            <button class="btn secondary small" data-act="addPendingTag" data-a="ingredient">+</button>
+          </div>
+          <div id="ingredientSearchResults"></div>
+          <div class="chip-row" id="pendingIngredient"></div>
+        </div>
+      </div>
+
+      <!-- Étape 2 : symptômes associés -->
+      <div class="wizard-step u-hidden" id="addStep2">
+        <label>Symptômes fréquents (MICI)</label>
+        <div class="chip-row" id="miciQuickPicks"></div>
+        <label class="u-mt12">Symptômes associés</label>
+        <div class="chip-row" id="symptomSelected"></div>
+        <input type="text" id="symptomSearch" placeholder="chercher ou créer un symptôme…" data-act="onSymptomSearch">
+        <div id="symptomResults"></div>
+      </div>
+
+      <!-- Étape 3 : détails facultatifs -->
+      <div class="wizard-step u-hidden" id="addStep3">
+        <label for="cookingInput">Mode de cuisson (tag)</label>
+        <div class="tag-input-row">
+          <input type="text" id="cookingInput" placeholder="ex. cru, vapeur, friture…" list="cookingSuggestions">
+          <button class="btn secondary small" data-act="addPendingTag" data-a="cooking">+</button>
+        </div>
+        <datalist id="cookingSuggestions"></datalist>
+        <div class="chip-row" id="pendingCooking"></div>
+
+        <label class="u-mt12" for="assocInput">Association (tag)</label>
+        <div class="tag-input-row">
+          <input type="text" id="assocInput" placeholder="ex. avec produits laitiers…" list="assocSuggestions">
+          <button class="btn secondary small" data-act="addPendingTag" data-a="assoc">+</button>
+        </div>
+        <datalist id="assocSuggestions"></datalist>
+        <div class="chip-row" id="pendingAssoc"></div>
+      </div>
+
+      <!-- Étape 4 : favori + enregistrement -->
+      <div class="wizard-step u-hidden" id="addStep4">
+        <button class="btn fav-toggle" id="favToggleBtn" data-act="toggleAddFavorite">☆ Marquer en favori</button>
+        <button class="btn full u-mt16" id="saveItemBtn" data-act="saveItem">Ajouter à la liste</button>
+      </div>
+
+      <div class="wizard-form-nav u-mt16">
+        <button class="btn ghost small" id="addFormBackBtn" data-act="addFormPrevStep">← Précédent</button>
+        <button class="btn secondary small" id="addFormNextBtn" data-act="addFormNextStep">Suivant →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card no-print">
+    <button type="button" class="filter-toggle" id="filterToggle" data-act="toggleFilters">
+      <span class="filter-toggle-title">Filtrer</span>
+      <span class="arrow">▾</span>
+    </button>
+    <div id="filterBody">
+      <label>Par symptôme</label>
+      <div class="chip-row" id="filterSymptoms"></div>
+      <label>Par cuisson</label>
+      <div class="chip-row" id="filterCooking"></div>
+      <label>Par association</label>
+      <div class="chip-row" id="filterAssoc"></div>
+      <button class="btn ghost small u-mt14" data-act="clearFilters">Réinitialiser les filtres</button>
+    </div>
+  </div>
+
+  <div class="list-toolbar no-print">
+    <input type="text" id="foodSearch" placeholder="Rechercher un aliment ou une recette…" data-act="onFoodSearch">
+    <select id="foodSort" data-act="onFoodSortChange">
+      <option value="name-asc">Nom (A→Z)</option>
+      <option value="name-desc">Nom (Z→A)</option>
+      <option value="count-desc">Réactions (+ → -)</option>
+      <option value="count-asc">Réactions (- → +)</option>
+    </select>
+  </div>
+
+  <div id="foodList"></div>
+
+</section>
+
+<section class="u-hidden" id="viewRecipeBook">
+
+  <div class="card no-print" id="rbAddCard">
+    <div class="add-buttons">
+      <button class="btn secondary" data-act="openRecipeBookCreateForm">Créer une recette</button>
+      <button class="btn secondary" data-act="openFavoritePicker">★ Depuis mes favoris</button>
+    </div>
+
+    <div class="u-hidden-mt16" id="rbFavPicker">
+      <div class="u-flex-sb-center">
+        <h2 class="u-m0">Choisir un favori</h2>
+        <button class="icon-btn" title="Fermer" data-act="closeFavPicker">✕</button>
+      </div>
+      <label for="rbFavSearch">Rechercher parmi tes favoris</label>
+      <input type="text" id="rbFavSearch" placeholder="taper un nom…" data-act="onRBFavSearch">
+      <div class="u-mt8" id="rbFavResults"></div>
+    </div>
+
+    <div class="u-hidden-mt16" id="rbForm">
+      <div class="u-flex-sb-center">
+        <h2 class="u-m0">Nouvelle recette</h2>
+        <button class="icon-btn" title="Fermer" data-act="requestCloseRBForm">✕</button>
+      </div>
+
+      <label for="rbName">Nom de la recette</label>
+      <input type="text" id="rbName" placeholder="ex. curry de lentilles">
+
+      <label for="rbIngredientInput">Ingrédients</label>
+      <div class="tag-input-row">
+        <input type="text" id="rbIngredientInput" placeholder="suggérés ou nouveaux…" data-act="onRBIngredientSearch">
+        <button class="btn secondary small" data-act="addRBIngredient">+</button>
+      </div>
+      <div id="rbIngredientSearchResults"></div>
+      <div class="chip-row" id="rbPendingIngredient"></div>
+
+      <label>Moment du repas</label>
+      <div class="chip-row" id="rbMealTags"></div>
+
+      <label for="rbDietInput">Régime / tag (sans lactose, sans viande…)</label>
+      <div class="tag-input-row">
+        <input type="text" id="rbDietInput" placeholder="ex. sans lactose…" list="rbDietSuggestions">
+        <button class="btn secondary small" data-act="addRBDietTag">+</button>
+      </div>
+      <datalist id="rbDietSuggestions"></datalist>
+      <div class="chip-row" id="rbPendingDiet"></div>
+
+      <label>Rapide</label>
+      <div class="rating-row" id="rbSpeedRow"></div>
+
+      <label>Facile</label>
+      <div class="rating-row" id="rbEasyRow"></div>
+
+      <label>Pas cher</label>
+      <div class="rating-row" id="rbPriceRow"></div>
+
+      <button class="btn full" data-act="saveRecipeBookEntry">Ajouter au carnet</button>
+    </div>
+  </div>
+
+  <div class="list-toolbar no-print">
+    <input type="text" id="rbSearch" placeholder="Rechercher une recette (nom ou ingrédient)…" data-act="onRBSearch">
+    <select id="rbSort" data-act="onRBSortChange">
+      <option value="name-asc">Nom (A→Z)</option>
+      <option value="name-desc">Nom (Z→A)</option>
+    </select>
+  </div>
+
+  <div id="recipeBookList"></div>
+
+</section>
+
+<section class="u-hidden" id="viewRanking">
+  <div class="card">
+    <h2 class="u-m-b6">📊 Suivi par symptôme</h2>
+    <p class="u-help">Cette liste ne montre que les aliments déjà signalés au moins une fois. Chaque symptôme forme sa propre catégorie, du plus fréquent au moins fréquent — un même aliment peut apparaître dans plusieurs si tu lui as associé plusieurs symptômes. Les aliments sans symptôme associé sont regroupés à part.</p>
+  </div>
+  <div id="rankingList"></div>
+</section>
+
+<section class="u-hidden" id="viewAgenda">
+
+  <div class="card">
+    <div class="calendar-nav">
+      <button class="calendar-nav-btn" data-act="changeMonth" data-a="-1">‹</button>
+      <h2 id="calendarTitle"></h2>
+      <button class="calendar-nav-btn" data-act="changeMonth" data-a="1">›</button>
+    </div>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </div>
+
+  <div class="card u-hidden" id="agendaPanel">
+    <div class="u-flex-sb-center">
+      <h2 class="u-m0-cap" id="agendaPanelTitle"></h2>
+      <button class="icon-btn" title="Fermer" data-act="closeAgendaPanel">✕</button>
+    </div>
+    <div class="u-mt10" id="agendaEntriesList"></div>
+
+    <button type="button" class="agenda-toggle symptom-toggle is-open" id="agendaSymptomToggle" data-act="toggleAgendaSection" data-a="symptom">
+      <span>+ Ajouter un symptôme</span>
+      <span class="agenda-toggle-arrow">▾</span>
+    </button>
+    <div class="agenda-section-body is-open" id="agendaForm">
+      <label>Symptômes</label>
+      <div class="chip-row" id="agendaSymptomSelected"></div>
+      <input type="text" id="agendaSymptomSearch" placeholder="chercher ou créer un symptôme…" data-act="onAgendaSymptomSearch">
+      <div id="agendaSymptomResults"></div>
+
+      <label for="agendaNote">Note libre (facultatif)</label>
+      <textarea id="agendaNote" rows="3" placeholder="Comment s'est passée la journée…"></textarea>
+
+      <label>Jauges (0 à 10)</label>
+      <div class="chip-row" id="agendaGaugeSuggestions"></div>
+      <div id="agendaGaugeSliders"></div>
+      <div class="tag-input-row u-mt10">
+        <input type="text" id="agendaNewGaugeInput" placeholder="nouvelle jauge… ex. Inconfort" list="gaugeSuggestionList">
+        <button class="btn secondary small" data-act="addNewGaugeType">+</button>
+      </div>
+      <datalist id="gaugeSuggestionList">
+        <option value="Inconfort">
+        <option value="Incapacité à travailler">
+        <option value="Incapacité à se concentrer">
+      </datalist>
+
+      <button class="btn full" data-act="saveAgendaEntry">Enregistrer l'entrée</button>
+    </div>
+
+    <button type="button" class="agenda-toggle rdv-toggle" id="agendaRdvToggle" data-act="toggleAgendaSection" data-a="rdv">
+      <span>+ Ajouter un rdv</span>
+      <span class="agenda-toggle-arrow">▾</span>
+    </button>
+    <div class="agenda-section-body" id="agendaRdvForm">
+      <label for="rdvName">Nom du rdv</label>
+      <input type="text" id="rdvName" placeholder="ex. Consultation gastro-entérologue">
+
+      <label for="rdvTime">Heure (facultatif)</label>
+      <input type="time" id="rdvTime">
+
+      <label for="rdvDoctorType">Type de médecin (facultatif)</label>
+      <input type="text" id="rdvDoctorType" placeholder="ex. gastro-entérologue…" data-act="onDoctorTypeSearch">
+      <div id="rdvDoctorTypeResults"></div>
+
+      <label for="rdvLocation">Lieu (facultatif)</label>
+      <input type="text" id="rdvLocation" placeholder="ex. cabinet, hôpital…">
+
+      <label for="rdvNotes">Notes brèves (facultatif)</label>
+      <textarea id="rdvNotes" rows="2" placeholder="…"></textarea>
+
+      <button class="btn full rdv-btn" data-act="saveAgendaRdv">Enregistrer le rdv</button>
+    </div>
+
+    <div id="agendaDaySummary" class="u-mt10"></div>
+  </div>
+
+</section>
+
+<section class="u-hidden" id="viewDoctorExport">
+
+  <div class="card">
+    <h2>Export Médecin</h2>
+    <p class="u-help-mb10">Prépare un résumé visuel simple à présenter à un médecin, pour réduire la charge mentale de l'échange.</p>
+    <div id="doctorExportForm"></div>
+  </div>
+
+</section>
+
+<section class="u-hidden" id="viewParams">
+
+  <p class="u-section-label u-mt0">💾 Données</p>
+  <div class="card">
+    <h2>Sauvegarde</h2>
+    <div class="no-print u-flex-wrap-gap8">
+      <button class="btn secondary small" data-act="exportData">Exporter mes données</button>
+      <button class="btn secondary small" data-act="exportDataEncrypted">Exporter (protégé)</button>
+      <button class="btn secondary small" data-act="triggerImportFile">Importer</button>
+      <input class="u-hidden" type="file" id="importFile" accept="application/json" data-act="importData">
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Pack d'aliments</h2>
+    <p class="u-help-mb10">Plus de 300 aliments courants, prêts à l'emploi si tu connais déjà plusieurs de tes intolérances — utile pour gagner du temps plutôt que tout retaper. Rien n'est installé par défaut.</p>
+    <div class="u-flex-wrap-gap8">
+      <button class="btn secondary small" data-act="installFoodPack">Installer le pack (300+)</button>
+      <button class="btn secondary small" data-act="removeUnusedPackFoods">Retirer les aliments du pack jamais utilisés</button>
+    </div>
+  </div>
+
+  <p class="u-section-label">🎨 Personnalisation</p>
+  <div class="card">
+    <h2>Affichage</h2>
+    <label for="themeSelect">Couleur de l'app</label>
+    <div class="theme-swatches" id="themeSwatches"></div>
+    <select id="themeSelect" data-act="onThemeChange" class="u-mt8">
+      <option value="celadon-prune">Céladon et prune (par défaut)</option>
+      <option value="ardoise-rose">Ardoise et rose</option>
+      <option value="brume-marine">Brume marine</option>
+      <option value="nuit-douce">Nuit douce</option>
+      <option value="ble-lavande">Blé et lavande</option>
+      <option value="coquille-corail">Coquille et corail</option>
+      <option value="lin-miel">Lin et miel</option>
+    </select>
+  </div>
+
+  <div class="card">
+    <h2>Fonctionnalités</h2>
+    <div class="u-flex-wrap-gap8">
+      <button class="btn secondary small" id="recipeBookFeatureToggleBtn" data-act="toggleFeature" data-a="recipebook">Recettes : activé</button>
+      <button class="btn secondary small" id="doctorExportFeatureToggleBtn" data-act="toggleFeature" data-a="doctor">Export médical : activé</button>
+      <button class="btn secondary small" id="agendaFeatureToggleBtn" data-act="toggleFeature" data-a="agenda">Agenda : activé</button>
+    </div>
+  </div>
+
+  <p class="u-section-label">🔒 Santé &amp; confidentialité</p>
+  <div class="card">
+    <h2>Sécurité</h2>
+    <button class="btn secondary small" data-act="toggleSecurityPanel">Gérer la protection par mot de passe</button>
+    <div class="no-print security-panel u-hidden-mt12" id="securityPanel"></div>
+  </div>
+
+  <div class="card">
+    <h2>Pathologies / Traitements</h2>
+    <div id="medsGate"></div>
+  </div>
+
+  <p class="u-section-label">📊 Suivi</p>
+  <div class="card">
+    <h2>Symptômes</h2>
+    <p class="u-help-mb10">Modifie la couleur de chaque symptôme via la palette de nuances ci-dessous.</p>
+    <div id="symptomManageList"></div>
+  </div>
+
+  <p class="u-section-label">ℹ️ À propos</p>
+  <div class="card">
+    <h2>À propos</h2>
+    <button class="text-action" data-act="replayOnboarding">Revoir le tutoriel</button><br>
+    <button class="text-action u-mt8" data-act="toggleLegalNotice">Note légale et éthique</button>
+    <div id="legalNotice" class="u-hidden u-mt10">
+      <p class="u-soft-85">Cette app est un <strong>outil de suivi personnel</strong>, pas un dispositif médical. Elle ne diagnostique rien, n'établit aucun lien de cause à effet certain, et ne recommande aucun traitement, régime ou conduite à tenir.</p>
+      <p class="u-soft-85 u-mt8">Si tu penses avoir une intolérance, une allergie ou tout autre souci de santé, <strong>consulte un médecin ou un professionnel de santé qualifié</strong> — les données notées ici sont un repère personnel, pas une base suffisante pour une décision de santé.</p>
+      <p class="u-soft-85 u-mt8">L'auteur·rice de cette app n'est pas médecin et ne formule aucune recommandation médicale, alimentaire ou thérapeutique à travers cet outil.</p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer class="no-print">Tout reste sur cet appareil.<br><span id="lastExportInfo"></span><br><span id="appVersionInfo"></span> ♥ par lóng</footer>
+
+<div class="onboarding-overlay no-print" id="onboardingOverlay">
+  <div class="onboarding-fullscreen">
+    <div class="onboarding-top">
+      <button class="onboarding-back-btn" id="onboardingPrevBtn" data-act="onboardingPrev" aria-label="Précédent">←</button>
+      <button class="onboarding-skip-btn" data-act="onboardingSkip">Passer</button>
+    </div>
+    <div id="onboardingSlide"></div>
+    <div class="onboarding-dots" id="onboardingDots"></div>
+    <button class="onboarding-cta" id="onboardingNextBtn" data-act="onboardingNext">Suivant →</button>
+  </div>
+</div>
+
+<div class="onboarding-overlay no-print" id="bilanOverlay">
+  <div class="onboarding-card" id="bilanCard"></div>
+</div>
+
+<div class="onboarding-overlay no-print" id="quickLogOverlay">
+  <div class="onboarding-card">
+    <div class="u-flex-sb-center">
+      <h2 class="u-m0">J'ai un symptôme maintenant</h2>
+      <button class="icon-btn" title="Fermer" data-act="closeQuickSymptomLog">✕</button>
+    </div>
+    <p class="u-help-mb10 u-mt8">Note-le en un tap — ça t'aide à repérer ce qui te fait du mal, et à en parler à ton médecin.</p>
+    <div class="chip-row" id="quickLogChips"></div>
+    <button class="btn full u-mt10" data-act="closeQuickSymptomLog">Terminé</button>
+  </div>
+</div>
+
+<button class="quick-log-fab no-print" data-act="openQuickSymptomLog" title="J'ai un symptôme maintenant">🩹</button>
+
+<div id="doctorExportPrintView"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

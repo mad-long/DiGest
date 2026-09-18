@@ -1,0 +1,16 @@
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Node (si des outils de test/lint sont ajoutés un jour)
+node_modules/
+npm-debug.log
+
+# Fichiers de build locaux éventuels
+*.apk
+*.aab
